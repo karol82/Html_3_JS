@@ -7,10 +7,20 @@
 <body>
     <script>
 
+//      Zad 1: Stwórz tablicę 50 elementową, wypełnij ją losowymi liczbami całkowitymi od 1 do 1000
+//     wypisz je, następnie wypisz wszystkie parzyste liczby.
+//     Do uzyskania losowej liczby parzystej użyj Math.random oraz Math.floor
 
-        // Zad 1: Stwórz tablicę 50 elementową, wypełnij ją losowymi liczbami całkowitymi od 1 do 1000
-        //     wypisz je, następnie wypisz wszystkie parzyste liczby.
-        //     Do uzyskania losowej liczby parzystej użyj Math.random oraz Math.floor
+    new_tab = []
+
+    for (let i = 0; i < 50; i++) {
+    new_tab[i] = Math.random() * 1000 + 1
+        console.log(new_tab[i])
+    }
+
+
+
+
 
         // Zad 2: Zaimplementuj funkcję, która:
         // - znajdzie kobiety
@@ -19,6 +29,8 @@
         // - znajdzie osoby z dwójką córek
         // - znajdzie osoby z dwójką dzieci, dzieci muszą być starsze niż 10 lat
         // - znajdzie osoby i dzieci, młodsze niż 20 lat
+
+
         var people = [
             {   firstName: 'Anna', lastName: 'Nowak', gender: 'F', age: 33, childs: [
                     { firstName: 'Piotr', lastName: 'Nowak', gender: 'M', age: 15 },
@@ -47,6 +59,21 @@
             {   firstName: 'Franciszek', lastName: 'Sypieczyk', gender: 'M', age: 51, childs: [] },
         ];
         console.log(people)
+
+
+
+// Przyklad
+
+var arr = [ {"id":"10", "class": "child-of-9"}, {"id":"11", "class": "child-of-10"}];
+
+for (var i = 0; i < arr.length; i++){
+    document.write("<br><br>array index: " + i);
+    var obj = arr[i];
+    for (var key in obj){
+        var value = obj[key];
+        document.write("<br> - " + key + ": " + value);
+    }
+}
 
     </script>
 </body>
