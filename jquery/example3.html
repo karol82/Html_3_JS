@@ -7,53 +7,24 @@
 </head>
 <body>
 <p>Paragraf</p>
-<input type="text">
-<form>
-    First name:<br>
-    <input type="text" name="firstname" value="Mickey">
-    <br>
-    Last name:<br>
-    <input type="text" name="lastname" value="Mouse">
-    <br><br>
-    <input type="submit" value="Submit">
-</form>
+<button>Klik</button>
+<div style="background-color: blue; height: 100px; width: 100px;position: absolute"></div>
 </body>
 <script>
     $(function () {
-        // mouse
-        var paragraphs = $("p");
-        paragraphs.click(function () {
-            console.log('Click')
+        $("button").click(function () {
+            // $("p").toggle('slow')
+            $("p").slideToggle()
         })
-        paragraphs.dblclick(function () {
-            console.log('Dblclick')
-        })
-        // keyborard
-        var input = $("input")
-        input.keypress(function () {
-            console.log('Keypress')
-        })
-        input.keyup(function () {
-            console.log('Keyup')
-        })
-        input.keydown(function () {
-            console.log('Keydown')
-        })
-        //form
-        var form = $("form")
-        form.submit(function () {
-            console.log('submit')
-        })
-        input.focus(function () {
-            console.log('focus')
-        })
-        input.blur(function () {
-            console.log('blur')
-        })
-        // kliknąć i przytrzymać
-        input.change(function () {
-            console.log('change')
-        })
+        // $("button").click(function () {
+        //     var div = $("div")
+        //     div.animate({
+        //         left: '100px'
+        //     })
+        //     div.animate({
+        //         left: '8px' // domyślna odległość
+        //     })
+        // })
     })
 </script>
 </html>
